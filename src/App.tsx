@@ -1,11 +1,13 @@
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { MotionConfig } from 'framer-motion';
 import { LangProvider } from './hooks/useLang';
+import { useAppUpdate } from './hooks/useAppUpdate';
 import TopBar from './components/TopBar';
 import Home from './screens/Home';
 import GameShell from './components/GameShell';
 
 export default function App() {
+  useAppUpdate();
   return (
     <LangProvider>
       <MotionConfig reducedMotion="user">
