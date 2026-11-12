@@ -161,6 +161,19 @@ export const insulinRoom = {
   /** Shown as already used. The free places match the video, which shows the upper arm. */
   usedSites: ['tummyL', 'tummyR', 'thighL', 'thighR', 'bottom'],
   endMessage: insulin.endMessage,
+  /** End-card timeline under the end message: needle → wait → eat, with a dot walking along it. */
+  waitNote: {
+    /** Read aloud with the end message. */
+    spoken: {
+      ar: 'بعد الإبرة ننتظر من ١٠ إلى ١٥ دقيقة، ثم نأكل.',
+      en: 'After the injection, wait 10 to 15 minutes, then eat.',
+    } as L,
+    /** Line under the timeline. */
+    shown: { ar: 'ننتظر قليلًا بعد الإبرة، ثم نأكل.', en: 'Wait a little after the injection, then eat.' } as L,
+    needle: { ar: 'الإبرة', en: 'Injection' } as L,
+    wait: { ar: '١٠–١٥ دقيقة', en: '10–15 min' } as L,
+    eat: { ar: 'نأكل', en: 'Eat' } as L,
+  },
 };
 
 /* ------------------------------------------------------------------ */
