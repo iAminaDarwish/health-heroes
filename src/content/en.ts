@@ -1,0 +1,28 @@
+import type { UiKey } from './ar';
+
+export const en: Record<UiKey, string> = {
+  appTitle: 'Health Heroes',
+  doctor: 'د. زينب ناصر',
+  tapToStart: 'Tap to start',
+  back: 'Back',
+  home: 'Home',
+  playAgain: 'Play again',
+  wellDone: 'Well done!',
+  tryAgain: 'Try again',
+  round: 'Round',
+  yes: 'Yes',
+  no: 'No',
+  parents: 'For parents',
+  close: 'Close',
+  soundOn: 'Sound on',
+  soundOff: 'Mute',
+  switchLang: 'عربي',
+  part: 'Part',
+  energy: "Yousif's energy",
+  moves: 'Tries',
+  day: 'Day',
+  drink: 'Drink',
+  game: 'Game',
+  modeSteps: 'Order the steps',
+  modeRoom: 'Home adventure',
+};
