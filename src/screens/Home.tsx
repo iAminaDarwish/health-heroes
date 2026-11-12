@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '../components/Icon';
 import { Stars } from '../components/Feedback';
-import { draftNote, gameContent, type GameId, PARENTS_NOTE_ENABLED, parentsNote, REVIEWED_BY_DOCTOR } from '../content/medical';
+import { gameContent, type GameId, PARENTS_NOTE_ENABLED, parentsNote } from '../content/medical';
 import { gameList } from '../games';
 import { useLang } from '../hooks/useLang';
 import { useProgress } from '../hooks/useProgress';
@@ -152,7 +152,6 @@ export default function Home() {
           <div className="modal-card" onClick={(e) => e.stopPropagation()}>
             <h2>{t('parents')}</h2>
             <p>{tl(parentsNote)}</p>
-            {!REVIEWED_BY_DOCTOR && <p className="draft-note">{tl(draftNote)}</p>}
             <button className="btn" onClick={() => setShowNote(false)}>
               {t('close')}
             </button>
