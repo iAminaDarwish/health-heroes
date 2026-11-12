@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { useLang } from '../hooks/useLang';
 import { setMuted, sfx, unlockAudio, useMuted } from '../hooks/useSound';
 import Icon from './Icon';
@@ -6,9 +7,11 @@ import Icon from './Icon';
 export default function TopBar() {
   const { lang, setLang, t } = useLang();
   const muted = useMuted();
+  /* On the home screen the bar floats over the sky so the video fills the screen. */
+  const overlay = useLocation().pathname === '/';
 
   return (
-    <header className="topbar" dir="ltr">
+    <header className={`topbar${overlay ? ' topbar-overlay' : ''}`} dir="ltr">
       <span className="topbar-name" lang="ar" dir="rtl">
         د. زينب ناصر
       </span>
